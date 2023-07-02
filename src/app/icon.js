@@ -29,7 +29,7 @@ export default function Icon() {
           border: "2px solid #075985",
         }}
       >
-        N
+        M
       </div>
     ),
     // ImageResponse options
