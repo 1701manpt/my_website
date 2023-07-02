@@ -83,9 +83,10 @@ export default function Home() {
               <Image
                 src="/background.jpg"
                 loader={post.image && (() => post.image)}
-                width={320}
-                height={384}
-                filled={true}
+                width="320"
+                height="384"
+                filled="true"
+                priority="true"
                 alt="Image of post"
                 className="rounded my-2 sm:w-80 sm:h-96 h-60 w-full object-cover shadow-lg"
               />

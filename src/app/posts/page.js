@@ -76,9 +76,10 @@ export default function PostsPage() {
             <Image
               src="/background.jpg"
               loader={post.image && (() => post.image)}
-              width={300}
-              height={160}
-              filled={true}
+              width="300"
+              height="160"
+              filled="true"
+              priority="true"
               alt="Image of post"
               className="rounded my-2 h-40 w-full object-cover shadow-lg"
             />

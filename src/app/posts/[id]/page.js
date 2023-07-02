@@ -67,9 +67,10 @@ export default function Post({ params }) {
         <Image
           src="/background.jpg"
           loader={dataPost.image && (() => dataPost.image)}
-          width={320}
-          height={384}
-          filled={true}
+          width="320"
+          height="384"
+          filled="true"
+          priority="true"
           alt="Image of post"
           className="rounded my-2 w-full h-auto w-full object-cover"
         />
