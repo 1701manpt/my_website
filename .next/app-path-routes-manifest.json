@@ -1,0 +1,15 @@
+{
+  "/icon/route": "/icon",
+  "/favicon.ico/route": "/favicon.ico",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/dashboard/page": "/dashboard",
+  "/events/page": "/events",
+  "/posts/page": "/posts",
+  "/(home)/page": "/",
+  "/user/page": "/user",
+  "/posts/[id]/page": "/posts/[id]",
+  "/user/account/page": "/user/account",
+  "/user/history/page": "/user/history",
+  "/user/posts/page": "/user/posts"
+}

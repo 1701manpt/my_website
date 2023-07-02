@@ -1,0 +1,15 @@
+{
+  "/icon/route": "app/icon/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/events/page": "app/events/page.js",
+  "/posts/page": "app/posts/page.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/user/page": "app/user/page.js",
+  "/posts/[id]/page": "app/posts/[id]/page.js",
+  "/user/account/page": "app/user/account/page.js",
+  "/user/history/page": "app/user/history/page.js",
+  "/user/posts/page": "app/user/posts/page.js"
+}
