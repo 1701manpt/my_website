@@ -37,11 +37,12 @@ export default function RootLayout({ children }) {
       href: "/contact",
     },
   ];
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="text-sky-950 sm:static relative">
-          <Header />
+          <Header asideLinks={dataNavbar} />
           <Navbar navLinks={dataNavbar} />
           <Main>{children}</Main>
           <Footer />

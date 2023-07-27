@@ -1,13 +1,36 @@
-export default function Aside() {
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Aside({ asideLinks, isOpen }) {
+  const pathname = usePathname();
   return (
-    <div className="hidden mt-14">
-      <aside className="fixed sm:hidden flex flex-col m-0 h-full w-60 z-10 text-sky-50 bg-sky-700">
-        <div className="py-1 px-2 text-center">Trang 1</div>
-        <div className="py-1 px-2 text-center">Trang 2</div>
-        <div className="py-1 px-2 text-center">Trang 3</div>
-        <div className="py-1 px-2 text-center">Trang 4</div>
-        <div className="py-1 px-2 text-center">Trang 5</div>
-      </aside>
+    <div
+      className={` ${
+        (isOpen && "block") || " hidden"
+      } fixed inset-0 bg-sky-700 mt-14 text-sky-50 shadow-lg sm:hidden`}
+    >
+      <nav className="divide-y my-4">
+        {asideLinks.map((link, i) => {
+          const isActive =
+            pathname.startsWith(link.href) && pathname.endsWith(link.href);
+
+          return (
+            <Link
+              key={i}
+              className={
+                "p-2 flex items-center px-4 h-full text-center" +
+                " " +
+                (isActive && "bg-white text-sky-950")
+              }
+              href={link.href}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
+      </nav>
     </div>
   );
 }
