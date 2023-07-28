@@ -17,8 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const dataNavbar = [
     {
-      name: "Trang chủ",
-      href: "/",
+      name: "Dashboard",
+      href: "/dashboard",
+      isAdmin: true,
     },
     {
       name: "Sự kiện",
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="text-sky-950 sm:static relative">
-          <Header asideLinks={dataNavbar} />
+          <Header navLinks={dataNavbar} />
           <Navbar navLinks={dataNavbar} />
           <Main>{children}</Main>
           <Footer />
@@ -52,7 +53,6 @@ export default function RootLayout({ children }) {
           >
             &uarr;
           </Link>
-          {/* <Aside /> */}
         </div>
       </body>
     </html>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Aside({ asideLinks, isOpen }) {
+export default function NavbarMobile({ navLinks, isOpen }) {
   const pathname = usePathname();
   return (
     <div
@@ -12,9 +12,18 @@ export default function Aside({ asideLinks, isOpen }) {
       } fixed inset-0 bg-sky-700 mt-14 text-sky-50 shadow-lg sm:hidden`}
     >
       <nav className="divide-y my-4">
-        {asideLinks.map((link, i) => {
-          const isActive =
-            pathname.startsWith(link.href) && pathname.endsWith(link.href);
+        <Link
+          className={
+            "p-2 flex items-center px-4 h-full text-center" +
+            " " +
+            (pathname === "/" && "bg-white text-sky-950")
+          }
+          href="/"
+        >
+          Trang chủ
+        </Link>
+        {navLinks.map((link, i) => {
+          const isActive = pathname.startsWith(link.href);
 
           return (
             <Link
